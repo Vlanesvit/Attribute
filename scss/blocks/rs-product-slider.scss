@@ -1,0 +1,28 @@
+.rs-product-slider {
+	// .rs-product-slider__container
+	&__container {
+	}
+
+	// .rs-product-slider__slider
+	&__slider {
+		margin-top: 39px;
+
+		@media (max-width: 1439.98px) {
+			margin-top: 20px;
+		}
+
+		@media (max-width: 991.98px) {
+			overflow: visible;
+		}
+	}
+
+	// .rs-product-slider__swiper
+	&__swiper {
+	}
+
+	// .rs-product-slider__slide
+	&__slide {
+		height: auto;
+		min-height: 1px;
+	}
+}

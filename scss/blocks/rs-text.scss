@@ -1,0 +1,55 @@
+@import "../base/_mixin";
+
+.rs-text {
+	@media (min-width: 1439.98px) {
+		margin: 100px 0px 110px;
+	}
+
+	// .rs-text__container
+	&__container {
+	}
+
+	// .rs-text__content
+	&__content {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	// .rs-text__logo
+	&__logo {
+		background-color: var(--primary-color);
+		border-radius: 7px;
+		width: 100%;
+		max-width: 170px;
+		margin-bottom: 20px;
+
+		@media (max-width: 1439.98px) {
+			max-width: 146px;
+		}
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: contain;
+		}
+	}
+
+	// .rs-text__body
+	&__body {
+		text-align: center;
+		max-width: 1095px;
+
+		h1 {
+			letter-spacing: normal;
+		}
+
+		.rs-btn {
+			margin-top: 50px;
+
+			@media (max-width: 1439.98px) {
+				margin-top: 30px;
+			}
+		}
+	}
+}

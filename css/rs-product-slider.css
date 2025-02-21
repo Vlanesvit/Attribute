@@ -1,0 +1,17 @@
+.rs-product-slider__slider {
+  margin-top: 39px;
+}
+@media (max-width: 1439.98px) {
+  .rs-product-slider__slider {
+    margin-top: 20px;
+  }
+}
+@media (max-width: 991.98px) {
+  .rs-product-slider__slider {
+    overflow: visible;
+  }
+}
+.rs-product-slider__slide {
+  height: auto;
+  min-height: 1px;
+}
