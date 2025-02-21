@@ -1008,7 +1008,7 @@ p {
   height: 1px;
   background-color: #d0d0ce;
   pointer-events: none;
-  z-index: 100000;
+  z-index: 10;
 }
 .rs-breadcrumbs__list {
   display: -webkit-box;

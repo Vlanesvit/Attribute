@@ -6,9 +6,12 @@
 	top: 0;
 	left: 0;
 	width: 100%;
-	background-color: #fff;
 	padding: 15px 0px 9px;
 	transition: transform 0.36s ease-in-out;
+
+	&._header-scroll {
+		background-color: #fff;
+	}
 
 	@media (max-width: 1599.98px) {
 		padding: 15px 0px;

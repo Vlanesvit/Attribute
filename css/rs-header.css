@@ -4,12 +4,14 @@
   top: 0;
   left: 0;
   width: 100%;
-  background-color: #fff;
   padding: 15px 0px 9px;
   -webkit-transition: -webkit-transform 0.36s ease-in-out;
   transition: -webkit-transform 0.36s ease-in-out;
   transition: transform 0.36s ease-in-out;
   transition: transform 0.36s ease-in-out, -webkit-transform 0.36s ease-in-out;
+}
+.rs-header._header-scroll {
+  background-color: #fff;
 }
 @media (max-width: 1599.98px) {
   .rs-header {
