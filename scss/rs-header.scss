@@ -21,6 +21,12 @@
 		padding: 8px 0px;
 	}
 
+	@media (min-width: 991.98px) {
+		.lock & {
+			padding-right: 5px;
+		}
+	}
+
 	// .rs-header__container
 	&__container {
 	}
