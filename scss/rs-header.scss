@@ -21,7 +21,6 @@
 
 	&._header-show {
 		pointer-events: unset;
-
 	}
 
 	@media (max-width: 1599.98px) {
@@ -303,7 +302,8 @@
 					@media (max-width: 1439.98px) {
 						font-size: 16px;
 
-						svg {
+						svg,
+						img {
 							width: 28px;
 							height: 28px;
 						}
@@ -312,7 +312,8 @@
 					@media (max-width: 1169.98px) {
 						font-size: 14px;
 
-						svg {
+						svg,
+						img {
 							width: 24px;
 							height: 24px;
 						}
@@ -325,7 +326,8 @@
 						line-height: 130%;
 						color: #191919;
 
-						svg {
+						svg,
+						img {
 							width: 20px;
 							height: 20px;
 						}
@@ -343,7 +345,8 @@
 						transition: all 0.3s ease 0s;
 					}
 
-					svg {
+					svg,
+					img {
 						margin-right: 10px;
 						display: flex;
 						align-items: center;
@@ -405,17 +408,25 @@
 									}
 								}
 
-								a {
-									display: flex;
-								}
-
-								svg {
+								svg,
+								img {
 									flex-shrink: 0;
 								}
 
 								@media (any-hover: hover) {
 									&:hover {
 										& > a {
+											background-color: transparent;
+											color: #000;
+										}
+									}
+								}
+
+								a {
+									display: flex;
+
+									@media (any-hover: hover) {
+										&:hover {
 											background-color: transparent;
 											color: var(--primary-color);
 										}
@@ -447,6 +458,7 @@
 								& > li {
 									flex: 0 0 calc(25% - (30px * 3 / 4));
 									font-size: 20px;
+									color: #000;
 
 									@include responsive-auto(font-size, (20, 14), (1599.98, 1439.98, 1169.98));
 
