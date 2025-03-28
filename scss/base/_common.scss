@@ -363,3 +363,37 @@ p {
 		text-align: center;
 	}
 }
+
+//========================================================================================================================================================
+.form-group {
+	border: unset !important;
+	border-radius: unset !important;
+	padding: 0 !important;
+	margin: 15px 0px !important;
+}
+
+.form-group label {
+	display: block !important;
+	margin-bottom: 10px !important;
+}
+
+.rs-text-block {
+	// .rs-text-block__wrapper
+	&__wrapper {
+		display: flex;
+
+		@media (max-width: 767.98px) {
+			flex-direction: column-reverse;
+		}
+	}
+
+	&__item {
+		@media (min-width: 767.98px) {
+			flex: 1 1 50%;
+		}
+
+		@media (max-width: 767.98px) {
+			width: 100%;
+		}
+	}
+}

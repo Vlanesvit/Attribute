@@ -60,19 +60,19 @@ function initSliders() {
 					grabCursor: true,
 
 					// Стрелки
-					navigation: {
+					navigation: arrowPrev && arrowNext ? {
 						prevEl: arrowPrev,
 						nextEl: arrowNext,
-					},
+					} : undefined,
 
 					// Пагинация
-					pagination: {
+					pagination: pagination ? {
 						el: pagination,
 						clickable: true,
 						type: 'fraction',
 						formatFractionCurrent: addZero,
 						formatFractionTotal: addZero
-					},
+					} : undefined,
 				});
 			});
 
@@ -83,91 +83,92 @@ function initSliders() {
 		const sliderBlocks = document.querySelectorAll('.rs-product-slider');
 		sliderBlocks.forEach(sliderBlock => {
 			const sliders = sliderBlock.querySelectorAll('.rs-product-slider__slider');
-			sliders.forEach(slider => {
-				const pagination = slider.querySelector('.rs-product-slider__pagination');
-				const arrowNext = sliderBlock.querySelector('.rs-product-slider__button-next');
-				const arrowPrev = sliderBlock.querySelector('.rs-product-slider__button-prev');
-				const navigation = sliderBlock.querySelector('.rs-product-slider__navigation');
+			const slidersSwiper = sliderBlock.querySelectorAll('.rs-product-slider__slide');
+			const pagination = sliderBlock.querySelector('.rs-product-slider__pagination');
+			const arrowNext = sliderBlock.querySelector('.rs-product-slider__button-next');
+			const arrowPrev = sliderBlock.querySelector('.rs-product-slider__button-prev');
 
-				const sliderSwiper = new Swiper(slider, {
-					// // Автопрокрутка
-					// autoplay: {
-					// 	// Пауза между прокруткой
-					// 	delay: 10000,
-					// 	// Закончить на последнем слайде
-					// 	stopOnLastSlide: false,
-					// 	// Отключить после ручного переключения
-					// 	disableOnInteraction: false,
-					// },
+			if (sliders.length > 0 && slidersSwiper.length) {
+				sliders.forEach(slider => {
+					const sliderSwiper = new Swiper(slider, {
+						// // Автопрокрутка
+						// autoplay: {
+						// 	// Пауза между прокруткой
+						// 	delay: 10000,
+						// 	// Закончить на последнем слайде
+						// 	stopOnLastSlide: false,
+						// 	// Отключить после ручного переключения
+						// 	disableOnInteraction: false,
+						// },
 
-					// Обновить свайпер
-					// при изменении элементов слайдера
-					observer: true,
-					// при изменении родительских элементов слайдера
-					observeParents: true,
-					// при изменении дочерних элементов слайдера
-					observeSlideChildren: true,
+						// Обновить свайпер
+						// при изменении элементов слайдера
+						observer: true,
+						// при изменении родительских элементов слайдера
+						observeParents: true,
+						// при изменении дочерних элементов слайдера
+						observeSlideChildren: true,
 
-					// Скорость смены слайдов
-					speed: 500,
+						// Скорость смены слайдов
+						speed: 500,
 
-					// Включение/отключение
-					// перетаскивание на ПК
-					simulateTouch: true,
-					// Чувствительность свайпа
-					touchRadio: 1,
-					// Угол срабатывания свайпа/перетаскивания
-					touchAngle: 45,
+						// Включение/отключение
+						// перетаскивание на ПК
+						simulateTouch: true,
+						// Чувствительность свайпа
+						touchRadio: 1,
+						// Угол срабатывания свайпа/перетаскивания
+						touchAngle: 45,
 
-					// Цикличность слайдера
-					// loop: true,
+						// Цикличность слайдера
+						// loop: true,
 
-					// Анимация переключения
-					// effect: 'fade',
+						// Анимация переключения
+						// effect: 'fade',
 
-					// Курсор
-					grabCursor: true,
+						// Курсор
+						grabCursor: true,
 
-					// Пагинация
-					pagination: {
-						el: pagination,
-						clickable: true,
-						type: 'progressbar'
-						// dynamicBullets: true
-					},
-
-					// Стрелки
-					navigation: {
-						nextEl: arrowNext,
-						prevEl: arrowPrev,
-					},
-
-
-					// Брекпоинты (адаптив)
-					breakpoints: {
-						320: {
-							slidesPerView: 1.1,
-							spaceBetween: 16,
+						// Пагинация
+						pagination: {
+							el: pagination,
+							clickable: true,
+							type: 'progressbar'
+							// dynamicBullets: true
 						},
-						539.98: {
-							slidesPerView: 2,
-							spaceBetween: 20,
+
+						// Стрелки
+						navigation: {
+							nextEl: arrowNext,
+							prevEl: arrowPrev,
 						},
-						767.98: {
-							slidesPerView: 2,
-							spaceBetween: 20,
+
+						// Брекпоинты (адаптив)
+						breakpoints: {
+							320: {
+								slidesPerView: 1.1,
+								spaceBetween: 16,
+							},
+							539.98: {
+								slidesPerView: 2,
+								spaceBetween: 20,
+							},
+							767.98: {
+								slidesPerView: 2,
+								spaceBetween: 20,
+							},
+							991.98: {
+								slidesPerView: 3,
+								spaceBetween: 20,
+							},
+							1430.98: {
+								slidesPerView: 4,
+								spaceBetween: 30,
+							},
 						},
-						991.98: {
-							slidesPerView: 3,
-							spaceBetween: 20,
-						},
-						1430.98: {
-							slidesPerView: 4,
-							spaceBetween: 30,
-						},
-					},
+					});
 				});
-			});
+			}
 		});
 	}
 
@@ -294,10 +295,10 @@ function initSliders() {
 				touchStartPreventDefault: false,
 
 				// Навигация
-				navigation: {
+				navigation: arrowPrev && arrowNext ? {
 					prevEl: arrowPrev,
 					nextEl: arrowNext,
-				},
+				} : undefined,
 			});
 		});
 	}
@@ -336,7 +337,7 @@ function initSlidersScroll() {
 	}
 }
 
-window.addEventListener("load", function (e) {
+document.addEventListener("DOMContentLoaded", function (e) {
 	// Запуск инициализации слайдеров
 	if (document.querySelector('.swiper')) {
 		initSliders();
