@@ -460,7 +460,7 @@
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
-    gap: 50px 30px;
+    gap: 50px 20px;
     background: #f4f7f8;
     border-radius: 7px;
     padding: 40px;
@@ -525,7 +525,7 @@
     -webkit-box-flex: 0;
         -ms-flex: 0 0 calc(25% - 22.5px);
             flex: 0 0 calc(25% - 22.5px);
-    font-size: 20px;
+    font-size: 19px;
     color: #000;
   }
 }
@@ -683,6 +683,8 @@
   .rs-header__menu .menu__dropdown_list li {
     padding: 0px 20px;
     color: #191919;
+    font-weight: 500;
+    font-size: 22px;
   }
   .rs-header__menu .menu__dropdown_list li > .menu__dropdown_list {
     top: 0;
@@ -691,8 +693,6 @@
   .rs-header__menu .menu__dropdown_list li > a {
     padding: 10px 20px;
     border-radius: 5px;
-    font-weight: 500;
-    font-size: 22px;
   }
 }
 @media (min-width: 991.98px) and (max-width: 1599.98px) {

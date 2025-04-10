@@ -442,7 +442,7 @@
 								display: flex;
 								flex-wrap: wrap;
 								align-items: flex-start;
-								gap: 50px 30px;
+								gap: 50px 20px;
 								background: #f4f7f8;
 								border-radius: 7px;
 								padding: 40px;
@@ -457,7 +457,7 @@
 
 								& > li {
 									flex: 0 0 calc(25% - (30px * 3 / 4));
-									font-size: 20px;
+									font-size: 19px;
 									color: #000;
 
 									@include responsive-auto(font-size, (20, 14), (1599.98, 1439.98, 1169.98));
@@ -573,6 +573,8 @@
 						li {
 							padding: 0px 20px;
 							color: #191919;
+							font-weight: 500;
+							font-size: 22px;
 
 							& > .menu__dropdown_list {
 								top: 0;
@@ -582,8 +584,6 @@
 							& > a {
 								padding: 10px 20px;
 								border-radius: 5px;
-								font-weight: 500;
-								font-size: 22px;
 
 								@media (max-width: 1599.98px) {
 									font-size: 20px;
